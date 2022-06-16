@@ -25,3 +25,7 @@ C:\Users\Atilla Kalay\Desktop\Pratikler\BookStore\WebApi\obj\Debug\net6.0\refint
 C:\Users\Atilla Kalay\Desktop\Pratikler\BookStore\WebApi\obj\Debug\net6.0\WebApi.pdb
 C:\Users\Atilla Kalay\Desktop\Pratikler\BookStore\WebApi\obj\Debug\net6.0\WebApi.genruntimeconfig.cache
 C:\Users\Atilla Kalay\Desktop\Pratikler\BookStore\WebApi\obj\Debug\net6.0\ref\WebApi.dll
+C:\Users\Atilla Kalay\Desktop\Pratikler\BookStore\WebApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\Atilla Kalay\Desktop\Pratikler\BookStore\WebApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Atilla Kalay\Desktop\Pratikler\BookStore\WebApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.InMemory.dll
+C:\Users\Atilla Kalay\Desktop\Pratikler\BookStore\WebApi\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
