@@ -26,11 +26,11 @@ namespace WebApi.BookOperations.GetByIdBook
                 getByIdBookModel.PublishDate = book.PublishDate.Date.ToString("dd/MM/yyyy");
                 getByIdBookModel.PageCount = book.PageCount;
                 getByIdBookModel.Title = book.Title;
-                getByIdBookModel.Genre =((GenreEnum) book.GenreId).ToString();
+                getByIdBookModel.Genre = ((GenreEnum)book.GenreId).ToString();
                 return getByIdBookModel;
             }
-               
-          
+
+
         }
 
         public class GetByIdBookModel
