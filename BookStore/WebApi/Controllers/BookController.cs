@@ -65,8 +65,10 @@ namespace WebApi.AddControllers
             GetByIdBookQuery.GetByIdBookModel result;
             try
             {
+                GetByIdBookQueryValidator validator = new GetByIdBookQueryValidator();
                 GetByIdBookQuery query = new GetByIdBookQuery(_dbContext);
                 query.BookId = id;
+                validator.ValidateAndThrow(query);
                 result = query.Handle();
             }
             catch (Exception exception)
@@ -114,8 +116,10 @@ namespace WebApi.AddControllers
             try
             {
                 UpdateBookViewCommand updateViewCommand = new UpdateBookViewCommand(_dbContext);
+                UpdateBookViewCommandValidator validator = new UpdateBookViewCommandValidator();
                 updateViewCommand.Id = id;
                 updateViewCommand.Model = updatedBook;
+                validator.ValidateAndThrow(updateViewCommand);
                 updateViewCommand.Handle();
             }
             catch (Exception exception)
