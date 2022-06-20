@@ -2,7 +2,7 @@
 
 namespace WebApi.BookOperations.UpdateBook
 {
-    public class UpdateBookViewCommandValidator:AbstractValidator<UpdateBookViewCommand>
+    public class UpdateBookViewCommandValidator : AbstractValidator<UpdateBookViewCommand>
     {
         public UpdateBookViewCommandValidator()
         {
