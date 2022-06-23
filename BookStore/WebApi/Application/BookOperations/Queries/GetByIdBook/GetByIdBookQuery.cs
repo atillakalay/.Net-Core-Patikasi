@@ -1,6 +1,7 @@
-﻿using WebApi.DBOperations;
+﻿using Microsoft.EntityFrameworkCore;
+using WebApi.DBOperations;
 
-namespace WebApi.BookOperations.GetByIdBook
+namespace WebApi.Application.BookOperations.Queries.GetByIdBook
 {
     public class GetByIdBookQuery
     {
@@ -15,7 +16,7 @@ namespace WebApi.BookOperations.GetByIdBook
 
         public GetByIdBookModel Handle()
         {
-            var book = _dbContext.Books.SingleOrDefault(b => b.Id == BookId);
+            var book = _dbContext.Books.Include(x => x.Genre).SingleOrDefault(b => b.Id == BookId);
             if (book == null)
             {
                 throw new InvalidOperationException("Kitap Bulunamadı");

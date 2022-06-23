@@ -1,7 +1,8 @@
 ﻿using AutoMapper;
 using WebApi.DBOperations;
+using WebApi.Entities;
 
-namespace WebApi.BookOperations.CreateBook
+namespace WebApi.Application.BookOperations.Commands.CreateBook
 {
     public class CreateBooksCommand
     {
@@ -25,11 +26,6 @@ namespace WebApi.BookOperations.CreateBook
             else
             {
                 book = _mapper.Map<Book>(Model);
-                //new Book();
-                //book.Title = Model.Title;
-                //book.GenreId = Model.GenreId;
-                //book.PageCount = Model.PageCount;
-                //book.PublishDate=Model.PublishDate;
                 _dbContext.Books.Add(book);
                 _dbContext.SaveChanges();
             }

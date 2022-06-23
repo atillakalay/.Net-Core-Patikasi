@@ -1,10 +1,10 @@
 ﻿using FluentValidation;
 
-namespace WebApi.BookOperations.UpdateBook
+namespace WebApi.Application.BookOperations.Commands.CreateBook
 {
-    public class UpdateBookViewCommandValidator : AbstractValidator<UpdateBookViewCommand>
+    public class CreateBookCommandValidator : AbstractValidator<CreateBooksCommand>
     {
-        public UpdateBookViewCommandValidator()
+        public CreateBookCommandValidator()
         {
             RuleFor(command => command.Model.GenreId).GreaterThan(0);
             RuleFor(command => command.Model.PageCount).GreaterThan(0).NotEmpty();

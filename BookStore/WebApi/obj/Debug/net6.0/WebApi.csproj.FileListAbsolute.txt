@@ -29,3 +29,7 @@ C:\Users\Atilla Kalay\Desktop\Pratikler\BookStore\WebApi\bin\Debug\net6.0\Micros
 C:\Users\Atilla Kalay\Desktop\Pratikler\BookStore\WebApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
 C:\Users\Atilla Kalay\Desktop\Pratikler\BookStore\WebApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.InMemory.dll
 C:\Users\Atilla Kalay\Desktop\Pratikler\BookStore\WebApi\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\Atilla Kalay\Desktop\Pratikler\BookStore\WebApi\bin\Debug\net6.0\AutoMapper.dll
+C:\Users\Atilla Kalay\Desktop\Pratikler\BookStore\WebApi\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\Atilla Kalay\Desktop\Pratikler\BookStore\WebApi\bin\Debug\net6.0\FluentValidation.dll
+C:\Users\Atilla Kalay\Desktop\Pratikler\BookStore\WebApi\bin\Debug\net6.0\Newtonsoft.Json.dll
