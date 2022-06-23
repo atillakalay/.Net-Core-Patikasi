@@ -1,16 +1,19 @@
 ﻿using Newtonsoft.Json;
 using System.Diagnostics;
 using System.Net;
+using WebApi.Services;
 
 namespace WebApi.Middlewares
 {
     public class CustomExceptionMiddleware
     {
         private readonly RequestDelegate _next;
+        ILoggerService _logger;
 
-        public CustomExceptionMiddleware(RequestDelegate next)
+        public CustomExceptionMiddleware(RequestDelegate next, ILoggerService logger)
         {
             _next = next;
+            _logger = logger;
         }
 
         public async Task Invoke(HttpContext context)
@@ -20,11 +23,11 @@ namespace WebApi.Middlewares
             {
 
                 string message = "[Request] HTTP " + context.Request.Method + " - " + context.Request.Path;
-                Console.WriteLine(message);
+                _logger.Write(message);
                 await _next(context);
 
                 message = "[Response] HTTP " + context.Request.Method + " - " + context.Request.Path + " responsed " + context.Response.StatusCode + " in " + watch.Elapsed.Milliseconds + " as ";
-                Console.WriteLine(message);
+                _logger.Write(message);
             }
             catch (Exception exception)
             {
@@ -39,7 +42,7 @@ namespace WebApi.Middlewares
             context.Response.ContentType = "application/json";
             context.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
             string message = "[Error] HTTP " + context.Request.Method + " - " + context.Response.StatusCode + " Error Message: " + exception.Message + " in " + watch.Elapsed.TotalMilliseconds + " as ";
-            Console.WriteLine(message);
+            _logger.Write(message);
             var result = JsonConvert.SerializeObject(new { error = exception.Message }, Formatting.None);
             return context.Response.WriteAsync(result);
         }
