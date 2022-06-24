@@ -54,7 +54,7 @@ namespace WebApi.AddControllers
         [HttpGet]
         public IActionResult GetAll()
         {
-            GetBooksQuery booksQuery = new GetBooksQuery(_dbContext);
+            GetBooksQuery booksQuery = new GetBooksQuery(_dbContext, _mapper);
             var result = booksQuery.Handle();
             return Ok(result);
         }
