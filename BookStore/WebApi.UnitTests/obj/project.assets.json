@@ -33,7 +33,19 @@
           "build/netstandard1.0/coverlet.collector.targets": {}
         }
       },
-      "FluentValidation/11.0.3": {
+      "FluentAssertions/6.7.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Configuration.ConfigurationManager": "4.4.0"
+        },
+        "compile": {
+          "lib/net6.0/FluentAssertions.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/FluentAssertions.dll": {}
+        }
+      },
+      "FluentValidation/11.1.0": {
         "type": "package",
         "compile": {
           "lib/net6.0/FluentValidation.dll": {}
@@ -42,7 +54,7 @@
           "lib/net6.0/FluentValidation.dll": {}
         }
       },
-      "Microsoft.CodeCoverage/17.1.0": {
+      "Microsoft.CodeCoverage/17.2.0": {
         "type": "package",
         "compile": {
           "lib/netcoreapp1.0/Microsoft.VisualStudio.CodeCoverage.Shim.dll": {}
@@ -236,11 +248,11 @@
           "buildTransitive/netcoreapp3.1/_._": {}
         }
       },
-      "Microsoft.NET.Test.Sdk/17.1.0": {
+      "Microsoft.NET.Test.Sdk/17.2.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.CodeCoverage": "17.1.0",
-          "Microsoft.TestPlatform.TestHost": "17.1.0"
+          "Microsoft.CodeCoverage": "17.2.0",
+          "Microsoft.TestPlatform.TestHost": "17.2.0"
         },
         "compile": {
           "lib/netcoreapp2.1/_._": {}
@@ -283,7 +295,7 @@
           "lib/netstandard2.0/Microsoft.OpenApi.dll": {}
         }
       },
-      "Microsoft.TestPlatform.ObjectModel/17.1.0": {
+      "Microsoft.TestPlatform.ObjectModel/17.2.0": {
         "type": "package",
         "dependencies": {
           "NuGet.Frameworks": "5.11.0",
@@ -380,10 +392,10 @@
           }
         }
       },
-      "Microsoft.TestPlatform.TestHost/17.1.0": {
+      "Microsoft.TestPlatform.TestHost/17.2.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.TestPlatform.ObjectModel": "17.1.0",
+          "Microsoft.TestPlatform.ObjectModel": "17.2.0",
           "Newtonsoft.Json": "9.0.1"
         },
         "compile": {
@@ -902,6 +914,18 @@
         },
         "build": {
           "buildTransitive/netcoreapp3.1/_._": {}
+        }
+      },
+      "System.Configuration.ConfigurationManager/4.4.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Security.Cryptography.ProtectedData": "4.4.0"
+        },
+        "compile": {
+          "ref/netstandard2.0/System.Configuration.ConfigurationManager.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Configuration.ConfigurationManager.dll": {}
         }
       },
       "System.Console/4.3.0": {
@@ -1627,6 +1651,21 @@
           "lib/netstandard1.3/System.Security.Cryptography.Primitives.dll": {}
         }
       },
+      "System.Security.Cryptography.ProtectedData/4.4.0": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard2.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
       "System.Security.Cryptography.X509Certificates/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -1876,10 +1915,16 @@
           "lib/netstandard1.1/xunit.execution.dotnet.dll": {}
         }
       },
-      "xunit.runner.visualstudio/2.4.3": {
+      "xunit.runner.visualstudio/2.4.5": {
         "type": "package",
+        "compile": {
+          "lib/netcoreapp3.1/_._": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/_._": {}
+        },
         "build": {
-          "build/netcoreapp2.1/xunit.runner.visualstudio.props": {}
+          "build/netcoreapp3.1/xunit.runner.visualstudio.props": {}
         }
       },
       "WebApi/1.0.0": {
@@ -1888,7 +1933,7 @@
         "dependencies": {
           "AutoMapper": "11.0.1",
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "11.0.0",
-          "FluentValidation": "11.0.3",
+          "FluentValidation": "11.1.0",
           "Microsoft.EntityFrameworkCore": "6.0.6",
           "Microsoft.EntityFrameworkCore.InMemory": "6.0.6",
           "Newtonsoft.Json": "13.0.1",
@@ -1987,16 +2032,46 @@
         "coverlet.collector.nuspec"
       ]
     },
-    "FluentValidation/11.0.3": {
-      "sha512": "UZSn74ufuSpHBSRivPVe1IGhOYnbyzr1jpoWqK3CTcnpDxkADcwoUbrbKhEio3MZLxTv9yVlFT7uDkb/XotOiQ==",
+    "FluentAssertions/6.7.0": {
+      "sha512": "PWbow/R3MnYDP8UW7zh/w80rGb+1NufGoNJeuzouTo2bqpvwNTFxbDwF6XWfFZ5IuquL2225Um+qSyZ8jVsT+w==",
       "type": "package",
-      "path": "fluentvalidation/11.0.3",
+      "path": "fluentassertions/6.7.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "FluentAssertions.png",
+        "fluentassertions.6.7.0.nupkg.sha512",
+        "fluentassertions.nuspec",
+        "lib/net47/FluentAssertions.dll",
+        "lib/net47/FluentAssertions.pdb",
+        "lib/net47/FluentAssertions.xml",
+        "lib/net6.0/FluentAssertions.dll",
+        "lib/net6.0/FluentAssertions.pdb",
+        "lib/net6.0/FluentAssertions.xml",
+        "lib/netcoreapp2.1/FluentAssertions.dll",
+        "lib/netcoreapp2.1/FluentAssertions.pdb",
+        "lib/netcoreapp2.1/FluentAssertions.xml",
+        "lib/netcoreapp3.0/FluentAssertions.dll",
+        "lib/netcoreapp3.0/FluentAssertions.pdb",
+        "lib/netcoreapp3.0/FluentAssertions.xml",
+        "lib/netstandard2.0/FluentAssertions.dll",
+        "lib/netstandard2.0/FluentAssertions.pdb",
+        "lib/netstandard2.0/FluentAssertions.xml",
+        "lib/netstandard2.1/FluentAssertions.dll",
+        "lib/netstandard2.1/FluentAssertions.pdb",
+        "lib/netstandard2.1/FluentAssertions.xml"
+      ]
+    },
+    "FluentValidation/11.1.0": {
+      "sha512": "Ld7w+2jOmnhQqFkngEGuEWTRa5j6u4Xzli7jKxRtbA5PtuHHcpin01qxvxYL0LomeJuzRMGAOURu2rKONdjKQA==",
+      "type": "package",
+      "path": "fluentvalidation/11.1.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "README.md",
         "fluent-validation-icon.png",
-        "fluentvalidation.11.0.3.nupkg.sha512",
+        "fluentvalidation.11.1.0.nupkg.sha512",
         "fluentvalidation.nuspec",
         "lib/net5.0/FluentValidation.dll",
         "lib/net5.0/FluentValidation.xml",
@@ -2008,10 +2083,10 @@
         "lib/netstandard2.1/FluentValidation.xml"
       ]
     },
-    "Microsoft.CodeCoverage/17.1.0": {
-      "sha512": "0N/ZJ71ncCxQWhgtkEYKOgu2oMHa8h1tsOUbhmIKXF8UwtSUCe4vHAsJ3DVcNWRwNfQzSTy263ZE+QF6MdIhhQ==",
+    "Microsoft.CodeCoverage/17.2.0": {
+      "sha512": "MsKhJmwIfHxNDbTIlgQy29UpWSWPpbZOQPhQ7xalRy+ABnl8/neFHZGzSP3XlpW2dKAXHTFrtIcKzW/kopY2Bg==",
       "type": "package",
-      "path": "microsoft.codecoverage/17.1.0",
+      "path": "microsoft.codecoverage/17.2.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2025,19 +2100,10 @@
         "build/netstandard1.0/CodeCoverage/amd64/VanguardInstrumentationProfiler_x64.config",
         "build/netstandard1.0/CodeCoverage/amd64/covrun64.dll",
         "build/netstandard1.0/CodeCoverage/amd64/msdia140.dll",
-        "build/netstandard1.0/CodeCoverage/amd64/msvcdis140.dll",
-        "build/netstandard1.0/CodeCoverage/amd64/msvcp140.dll",
-        "build/netstandard1.0/CodeCoverage/amd64/msvcp140_atomic_wait.dll",
-        "build/netstandard1.0/CodeCoverage/amd64/vcruntime140.dll",
-        "build/netstandard1.0/CodeCoverage/amd64/vcruntime140_1.dll",
         "build/netstandard1.0/CodeCoverage/codecoveragemessages.dll",
         "build/netstandard1.0/CodeCoverage/coreclr/Microsoft.VisualStudio.CodeCoverage.Shim.dll",
         "build/netstandard1.0/CodeCoverage/covrun32.dll",
         "build/netstandard1.0/CodeCoverage/msdia140.dll",
-        "build/netstandard1.0/CodeCoverage/msvcdis140.dll",
-        "build/netstandard1.0/CodeCoverage/msvcp140.dll",
-        "build/netstandard1.0/CodeCoverage/msvcp140_atomic_wait.dll",
-        "build/netstandard1.0/CodeCoverage/vcruntime140.dll",
         "build/netstandard1.0/InstrumentationEngine/alpine/x64/VanguardInstrumentationProfiler_x64.config",
         "build/netstandard1.0/InstrumentationEngine/alpine/x64/libCoverageInstrumentationMethod.so",
         "build/netstandard1.0/InstrumentationEngine/alpine/x64/libInstrumentationEngine.so",
@@ -2073,7 +2139,7 @@
         "build/netstandard1.0/zh-Hant/Microsoft.VisualStudio.TraceDataCollector.resources.dll",
         "lib/net45/Microsoft.VisualStudio.CodeCoverage.Shim.dll",
         "lib/netcoreapp1.0/Microsoft.VisualStudio.CodeCoverage.Shim.dll",
-        "microsoft.codecoverage.17.1.0.nupkg.sha512",
+        "microsoft.codecoverage.17.2.0.nupkg.sha512",
         "microsoft.codecoverage.nuspec"
       ]
     },
@@ -2437,10 +2503,10 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "Microsoft.NET.Test.Sdk/17.1.0": {
-      "sha512": "MVKvOsHIfrZrvg+8aqOF5dknO/qWrR1sWZjMPQ1N42MKMlL/zQL30FQFZxPeWfmVKWUWAOmAHYsqB5OerTKziw==",
+    "Microsoft.NET.Test.Sdk/17.2.0": {
+      "sha512": "kYmkDYbcDd+jNvmMH4TMtgHjsUYbIsWENM2VcjB0X7TawXbehL5I8OIsu2TgFS/nQCgZE94InrqMxrm7WDy+Lw==",
       "type": "package",
-      "path": "microsoft.net.test.sdk/17.1.0",
+      "path": "microsoft.net.test.sdk/17.2.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2467,7 +2533,7 @@
         "lib/netcoreapp1.0/_._",
         "lib/netcoreapp2.1/_._",
         "lib/uap10.0/_._",
-        "microsoft.net.test.sdk.17.1.0.nupkg.sha512",
+        "microsoft.net.test.sdk.17.2.0.nupkg.sha512",
         "microsoft.net.test.sdk.nuspec"
       ]
     },
@@ -2518,10 +2584,10 @@
         "microsoft.openapi.nuspec"
       ]
     },
-    "Microsoft.TestPlatform.ObjectModel/17.1.0": {
-      "sha512": "OMo/FYnKGy3lZEK0gfitskRM3ga/YBt6MyCyFPq0xNLeybGOQ6HnYNAAvzyePo5WPuMiw3LX+HiuRWNjnas1fA==",
+    "Microsoft.TestPlatform.ObjectModel/17.2.0": {
+      "sha512": "7j1KYDHLhU98XnCEbECMncXLydI9fNiFLcFsiBsP3lV6EkHOaj5kTPAWHYkKnPGRC9TbZUboSQq8rWI4dTQsxg==",
       "type": "package",
-      "path": "microsoft.testplatform.objectmodel/17.1.0",
+      "path": "microsoft.testplatform.objectmodel/17.2.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2759,14 +2825,14 @@
         "lib/uap10.0/zh-Hans/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll",
         "lib/uap10.0/zh-Hant/Microsoft.TestPlatform.CoreUtilities.resources.dll",
         "lib/uap10.0/zh-Hant/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll",
-        "microsoft.testplatform.objectmodel.17.1.0.nupkg.sha512",
+        "microsoft.testplatform.objectmodel.17.2.0.nupkg.sha512",
         "microsoft.testplatform.objectmodel.nuspec"
       ]
     },
-    "Microsoft.TestPlatform.TestHost/17.1.0": {
-      "sha512": "JS0JDLniDhIzkSPLHz7N/x1CG8ywJOtwInFDYA3KQvbz+ojGoT5MT2YDVReL1b86zmNRV8339vsTSm/zh0RcMg==",
+    "Microsoft.TestPlatform.TestHost/17.2.0": {
+      "sha512": "bI67J+hers241h7eD2eecS02p9CbKcQDIeoRvO4FgMlTWg2ZTzc0D3uWLYr5U+K5x9O1pNmyMoMDbYIeWY/TWw==",
       "type": "package",
-      "path": "microsoft.testplatform.testhost/17.1.0",
+      "path": "microsoft.testplatform.testhost/17.2.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2980,7 +3046,7 @@
         "lib/uap10.0/Microsoft.VisualStudio.TestPlatform.Common.dll",
         "lib/uap10.0/Microsoft.VisualStudio.TestPlatform.ObjectModel.dll",
         "lib/uap10.0/testhost.dll",
-        "microsoft.testplatform.testhost.17.1.0.nupkg.sha512",
+        "microsoft.testplatform.testhost.17.2.0.nupkg.sha512",
         "microsoft.testplatform.testhost.nuspec"
       ]
     },
@@ -3612,6 +3678,26 @@
         "system.collections.immutable.6.0.0.nupkg.sha512",
         "system.collections.immutable.nuspec",
         "useSharedDesignerContext.txt"
+      ]
+    },
+    "System.Configuration.ConfigurationManager/4.4.0": {
+      "sha512": "gWwQv/Ug1qWJmHCmN17nAbxJYmQBM/E94QxKLksvUiiKB1Ld3Sc/eK1lgmbSjDFxkQhVuayI/cGFZhpBSodLrg==",
+      "type": "package",
+      "path": "system.configuration.configurationmanager/4.4.0",
+      "files": [
+        ".nupkg.metadata",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/System.Configuration.ConfigurationManager.dll",
+        "lib/netstandard2.0/System.Configuration.ConfigurationManager.dll",
+        "ref/net461/System.Configuration.ConfigurationManager.dll",
+        "ref/net461/System.Configuration.ConfigurationManager.xml",
+        "ref/netstandard2.0/System.Configuration.ConfigurationManager.dll",
+        "ref/netstandard2.0/System.Configuration.ConfigurationManager.xml",
+        "system.configuration.configurationmanager.4.4.0.nupkg.sha512",
+        "system.configuration.configurationmanager.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
       ]
     },
     "System.Console/4.3.0": {
@@ -5793,6 +5879,46 @@
         "system.security.cryptography.primitives.nuspec"
       ]
     },
+    "System.Security.Cryptography.ProtectedData/4.4.0": {
+      "sha512": "cJV7ScGW7EhatRsjehfvvYVBvtiSMKgN8bOVI0bQhnF5bU7vnHVIsH49Kva7i7GWaWYvmEzkYVk1TC+gZYBEog==",
+      "type": "package",
+      "path": "system.security.cryptography.protecteddata/4.4.0",
+      "files": [
+        ".nupkg.metadata",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net46/System.Security.Cryptography.ProtectedData.dll",
+        "lib/net461/System.Security.Cryptography.ProtectedData.dll",
+        "lib/netstandard1.3/System.Security.Cryptography.ProtectedData.dll",
+        "lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net46/System.Security.Cryptography.ProtectedData.dll",
+        "ref/net461/System.Security.Cryptography.ProtectedData.dll",
+        "ref/net461/System.Security.Cryptography.ProtectedData.xml",
+        "ref/netstandard1.3/System.Security.Cryptography.ProtectedData.dll",
+        "ref/netstandard2.0/System.Security.Cryptography.ProtectedData.dll",
+        "ref/netstandard2.0/System.Security.Cryptography.ProtectedData.xml",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "runtimes/win/lib/net46/System.Security.Cryptography.ProtectedData.dll",
+        "runtimes/win/lib/net461/System.Security.Cryptography.ProtectedData.dll",
+        "runtimes/win/lib/netstandard1.3/System.Security.Cryptography.ProtectedData.dll",
+        "runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll",
+        "system.security.cryptography.protecteddata.4.4.0.nupkg.sha512",
+        "system.security.cryptography.protecteddata.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
     "System.Security.Cryptography.X509Certificates/4.3.0": {
       "sha512": "t2Tmu6Y2NtJ2um0RtcuhP7ZdNNxXEgUm2JeoA/0NvlMjAhKCnM1NX07TDl3244mVp3QU6LPEhT3HTtH1uF7IYw==",
       "type": "package",
@@ -6526,24 +6652,24 @@
         "xunit.extensibility.execution.nuspec"
       ]
     },
-    "xunit.runner.visualstudio/2.4.3": {
-      "sha512": "kZZSmOmKA8OBlAJaquPXnJJLM9RwQ27H7BMVqfMLUcTi9xHinWGJiWksa3D4NEtz0wZ/nxd2mogObvBgJKCRhQ==",
+    "xunit.runner.visualstudio/2.4.5": {
+      "sha512": "OwHamvBdUKgqsXfBzWiCW/O98BTx81UKzx2bieIOQI7CZFE5NEQZGi8PBQGIKawDW96xeRffiNf20SjfC0x9hw==",
       "type": "package",
-      "path": "xunit.runner.visualstudio/2.4.3",
+      "path": "xunit.runner.visualstudio/2.4.5",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "License.txt",
-        "build/net452/xunit.abstractions.dll",
-        "build/net452/xunit.runner.reporters.net452.dll",
-        "build/net452/xunit.runner.utility.net452.dll",
-        "build/net452/xunit.runner.visualstudio.props",
-        "build/net452/xunit.runner.visualstudio.testadapter.dll",
-        "build/netcoreapp2.1/xunit.abstractions.dll",
-        "build/netcoreapp2.1/xunit.runner.reporters.netcoreapp10.dll",
-        "build/netcoreapp2.1/xunit.runner.utility.netcoreapp10.dll",
-        "build/netcoreapp2.1/xunit.runner.visualstudio.dotnetcore.testadapter.dll",
-        "build/netcoreapp2.1/xunit.runner.visualstudio.props",
+        "build/net462/xunit.abstractions.dll",
+        "build/net462/xunit.runner.reporters.net452.dll",
+        "build/net462/xunit.runner.utility.net452.dll",
+        "build/net462/xunit.runner.visualstudio.props",
+        "build/net462/xunit.runner.visualstudio.testadapter.dll",
+        "build/netcoreapp3.1/xunit.abstractions.dll",
+        "build/netcoreapp3.1/xunit.runner.reporters.netcoreapp10.dll",
+        "build/netcoreapp3.1/xunit.runner.utility.netcoreapp10.dll",
+        "build/netcoreapp3.1/xunit.runner.visualstudio.dotnetcore.testadapter.dll",
+        "build/netcoreapp3.1/xunit.runner.visualstudio.props",
         "build/uap10.0.16299/xunit.runner.reporters.netstandard15.dll",
         "build/uap10.0.16299/xunit.runner.utility.netstandard15.dll",
         "build/uap10.0.16299/xunit.runner.utility.uwp10.dll",
@@ -6552,8 +6678,11 @@
         "build/uap10.0.16299/xunit.runner.visualstudio.targets",
         "build/uap10.0.16299/xunit.runner.visualstudio.uwp.testadapter.dll",
         "build/uap10.0.16299/xunit.runner.visualstudio.uwp.testadapter.pri",
+        "lib/net462/_._",
+        "lib/netcoreapp3.1/_._",
+        "lib/uap10.0.16299/_._",
         "logo-512-transparent.png",
-        "xunit.runner.visualstudio.2.4.3.nupkg.sha512",
+        "xunit.runner.visualstudio.2.4.5.nupkg.sha512",
         "xunit.runner.visualstudio.nuspec"
       ]
     },
@@ -6565,11 +6694,14 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "Microsoft.NET.Test.Sdk >= 17.1.0",
+      "FluentAssertions >= 6.7.0",
+      "Microsoft.EntityFrameworkCore >= 6.0.6",
+      "Microsoft.EntityFrameworkCore.InMemory >= 6.0.6",
+      "Microsoft.NET.Test.Sdk >= 17.2.0",
       "WebApi >= 1.0.0",
       "coverlet.collector >= 3.1.2",
       "xunit >= 2.4.1",
-      "xunit.runner.visualstudio >= 2.4.3"
+      "xunit.runner.visualstudio >= 2.4.5"
     ]
   },
   "packageFolders": {
@@ -6621,9 +6753,21 @@
       "net6.0": {
         "targetAlias": "net6.0",
         "dependencies": {
+          "FluentAssertions": {
+            "target": "Package",
+            "version": "[6.7.0, )"
+          },
+          "Microsoft.EntityFrameworkCore": {
+            "target": "Package",
+            "version": "[6.0.6, )"
+          },
+          "Microsoft.EntityFrameworkCore.InMemory": {
+            "target": "Package",
+            "version": "[6.0.6, )"
+          },
           "Microsoft.NET.Test.Sdk": {
             "target": "Package",
-            "version": "[17.1.0, )"
+            "version": "[17.2.0, )"
           },
           "coverlet.collector": {
             "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
@@ -6639,7 +6783,7 @@
             "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
             "suppressParent": "All",
             "target": "Package",
-            "version": "[2.4.3, )"
+            "version": "[2.4.5, )"
           }
         },
         "imports": [

@@ -14,7 +14,7 @@ namespace WebApi.AddControllers
     [Route("[controller]s")]
     public class BookController : ControllerBase
     {
-        private readonly BookStoreDbContext _dbContext;
+        private readonly IBookStoreDbContext _dbContext;
         private readonly IMapper _mapper;
         //private static List<Book> BookList = new List<Book>()
         //{
@@ -45,7 +45,7 @@ namespace WebApi.AddControllers
         //    }
         //};
 
-        public BookController(BookStoreDbContext dbContext, IMapper mapper)
+        public BookController(IBookStoreDbContext dbContext, IMapper mapper)
         {
             _dbContext = dbContext;
             _mapper = mapper;

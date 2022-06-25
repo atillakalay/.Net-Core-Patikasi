@@ -116,3 +116,7 @@ C:\Users\Atilla Kalay\Desktop\Pratikler\BookStore\WebApi.UnitTests\bin\Debug\net
 C:\Users\Atilla Kalay\Desktop\Pratikler\BookStore\WebApi.UnitTests\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Users\Atilla Kalay\Desktop\Pratikler\BookStore\WebApi.UnitTests\bin\Debug\net6.0\WebApi.dll
 C:\Users\Atilla Kalay\Desktop\Pratikler\BookStore\WebApi.UnitTests\bin\Debug\net6.0\WebApi.pdb
+C:\Users\Atilla Kalay\Desktop\Pratikler\BookStore\WebApi.UnitTests\bin\Debug\net6.0\FluentAssertions.dll
+C:\Users\Atilla Kalay\Desktop\Pratikler\BookStore\WebApi.UnitTests\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+C:\Users\Atilla Kalay\Desktop\Pratikler\BookStore\WebApi.UnitTests\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Atilla Kalay\Desktop\Pratikler\BookStore\WebApi.UnitTests\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll

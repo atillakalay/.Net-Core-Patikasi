@@ -5,11 +5,11 @@ namespace WebApi.Application.BookOperations.Queries.GetByIdBook
 {
     public class GetByIdBookQuery
     {
-        private readonly BookStoreDbContext _dbContext;
+        private readonly IBookStoreDbContext _dbContext;
         public GetByIdBookModel Model { get; set; }
         public int BookId { get; set; }
 
-        public GetByIdBookQuery(BookStoreDbContext dbContext)
+        public GetByIdBookQuery(IBookStoreDbContext dbContext)
         {
             _dbContext = dbContext;
         }

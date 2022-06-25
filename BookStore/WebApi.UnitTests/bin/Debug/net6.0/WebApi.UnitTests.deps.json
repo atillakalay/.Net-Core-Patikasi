@@ -8,11 +8,14 @@
     ".NETCoreApp,Version=v6.0": {
       "WebApi.UnitTests/1.0.0": {
         "dependencies": {
-          "Microsoft.NET.Test.Sdk": "17.1.0",
+          "FluentAssertions": "6.7.0",
+          "Microsoft.EntityFrameworkCore": "6.0.6",
+          "Microsoft.EntityFrameworkCore.InMemory": "6.0.6",
+          "Microsoft.NET.Test.Sdk": "17.2.0",
           "WebApi": "1.0.0",
           "coverlet.collector": "3.1.2",
           "xunit": "2.4.1",
-          "xunit.runner.visualstudio": "2.4.3"
+          "xunit.runner.visualstudio": "2.4.5"
         },
         "runtime": {
           "WebApi.UnitTests.dll": {}
@@ -42,19 +45,30 @@
         }
       },
       "coverlet.collector/3.1.2": {},
-      "FluentValidation/11.0.3": {
+      "FluentAssertions/6.7.0": {
+        "dependencies": {
+          "System.Configuration.ConfigurationManager": "4.4.0"
+        },
         "runtime": {
-          "lib/net6.0/FluentValidation.dll": {
-            "assemblyVersion": "11.0.0.0",
-            "fileVersion": "11.0.3.0"
+          "lib/net6.0/FluentAssertions.dll": {
+            "assemblyVersion": "6.7.0.0",
+            "fileVersion": "6.7.0.0"
           }
         }
       },
-      "Microsoft.CodeCoverage/17.1.0": {
+      "FluentValidation/11.1.0": {
+        "runtime": {
+          "lib/net6.0/FluentValidation.dll": {
+            "assemblyVersion": "11.0.0.0",
+            "fileVersion": "11.1.0.0"
+          }
+        }
+      },
+      "Microsoft.CodeCoverage/17.2.0": {
         "runtime": {
           "lib/netcoreapp1.0/Microsoft.VisualStudio.CodeCoverage.Shim.dll": {
             "assemblyVersion": "15.0.0.0",
-            "fileVersion": "17.100.221.61401"
+            "fileVersion": "17.200.422.18102"
           }
         }
       },
@@ -145,10 +159,10 @@
           "System.Runtime.CompilerServices.Unsafe": "6.0.0"
         }
       },
-      "Microsoft.NET.Test.Sdk/17.1.0": {
+      "Microsoft.NET.Test.Sdk/17.2.0": {
         "dependencies": {
-          "Microsoft.CodeCoverage": "17.1.0",
-          "Microsoft.TestPlatform.TestHost": "17.1.0"
+          "Microsoft.CodeCoverage": "17.2.0",
+          "Microsoft.TestPlatform.TestHost": "17.2.0"
         }
       },
       "Microsoft.NETCore.Platforms/1.1.0": {},
@@ -161,7 +175,7 @@
           }
         }
       },
-      "Microsoft.TestPlatform.ObjectModel/17.1.0": {
+      "Microsoft.TestPlatform.ObjectModel/17.2.0": {
         "dependencies": {
           "NuGet.Frameworks": "5.11.0",
           "System.Reflection.Metadata": "1.6.0"
@@ -261,9 +275,9 @@
           }
         }
       },
-      "Microsoft.TestPlatform.TestHost/17.1.0": {
+      "Microsoft.TestPlatform.TestHost/17.2.0": {
         "dependencies": {
-          "Microsoft.TestPlatform.ObjectModel": "17.1.0",
+          "Microsoft.TestPlatform.ObjectModel": "17.2.0",
           "Newtonsoft.Json": "13.0.1"
         },
         "runtime": {
@@ -603,6 +617,17 @@
       "System.Collections.Immutable/6.0.0": {
         "dependencies": {
           "System.Runtime.CompilerServices.Unsafe": "6.0.0"
+        }
+      },
+      "System.Configuration.ConfigurationManager/4.4.0": {
+        "dependencies": {
+          "System.Security.Cryptography.ProtectedData": "4.4.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Configuration.ConfigurationManager.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.6.25519.3"
+          }
         }
       },
       "System.Console/4.3.0": {
@@ -1018,6 +1043,22 @@
           "System.Threading.Tasks": "4.3.0"
         }
       },
+      "System.Security.Cryptography.ProtectedData/4.4.0": {
+        "runtime": {
+          "lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll": {
+            "assemblyVersion": "4.0.2.0",
+            "fileVersion": "4.6.25519.3"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "4.0.2.0",
+            "fileVersion": "4.6.25519.3"
+          }
+        }
+      },
       "System.Security.Cryptography.X509Certificates/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.1.0",
@@ -1186,12 +1227,12 @@
           }
         }
       },
-      "xunit.runner.visualstudio/2.4.3": {},
+      "xunit.runner.visualstudio/2.4.5": {},
       "WebApi/1.0.0": {
         "dependencies": {
           "AutoMapper": "11.0.1",
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "11.0.0",
-          "FluentValidation": "11.0.3",
+          "FluentValidation": "11.1.0",
           "Microsoft.EntityFrameworkCore": "6.0.6",
           "Microsoft.EntityFrameworkCore.InMemory": "6.0.6",
           "Newtonsoft.Json": "13.0.1",
@@ -1230,19 +1271,26 @@
       "path": "coverlet.collector/3.1.2",
       "hashPath": "coverlet.collector.3.1.2.nupkg.sha512"
     },
-    "FluentValidation/11.0.3": {
+    "FluentAssertions/6.7.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-UZSn74ufuSpHBSRivPVe1IGhOYnbyzr1jpoWqK3CTcnpDxkADcwoUbrbKhEio3MZLxTv9yVlFT7uDkb/XotOiQ==",
-      "path": "fluentvalidation/11.0.3",
-      "hashPath": "fluentvalidation.11.0.3.nupkg.sha512"
+      "sha512": "sha512-PWbow/R3MnYDP8UW7zh/w80rGb+1NufGoNJeuzouTo2bqpvwNTFxbDwF6XWfFZ5IuquL2225Um+qSyZ8jVsT+w==",
+      "path": "fluentassertions/6.7.0",
+      "hashPath": "fluentassertions.6.7.0.nupkg.sha512"
     },
-    "Microsoft.CodeCoverage/17.1.0": {
+    "FluentValidation/11.1.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-0N/ZJ71ncCxQWhgtkEYKOgu2oMHa8h1tsOUbhmIKXF8UwtSUCe4vHAsJ3DVcNWRwNfQzSTy263ZE+QF6MdIhhQ==",
-      "path": "microsoft.codecoverage/17.1.0",
-      "hashPath": "microsoft.codecoverage.17.1.0.nupkg.sha512"
+      "sha512": "sha512-Ld7w+2jOmnhQqFkngEGuEWTRa5j6u4Xzli7jKxRtbA5PtuHHcpin01qxvxYL0LomeJuzRMGAOURu2rKONdjKQA==",
+      "path": "fluentvalidation/11.1.0",
+      "hashPath": "fluentvalidation.11.1.0.nupkg.sha512"
+    },
+    "Microsoft.CodeCoverage/17.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-MsKhJmwIfHxNDbTIlgQy29UpWSWPpbZOQPhQ7xalRy+ABnl8/neFHZGzSP3XlpW2dKAXHTFrtIcKzW/kopY2Bg==",
+      "path": "microsoft.codecoverage/17.2.0",
+      "hashPath": "microsoft.codecoverage.17.2.0.nupkg.sha512"
     },
     "Microsoft.CSharp/4.7.0": {
       "type": "package",
@@ -1342,12 +1390,12 @@
       "path": "microsoft.extensions.primitives/6.0.0",
       "hashPath": "microsoft.extensions.primitives.6.0.0.nupkg.sha512"
     },
-    "Microsoft.NET.Test.Sdk/17.1.0": {
+    "Microsoft.NET.Test.Sdk/17.2.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-MVKvOsHIfrZrvg+8aqOF5dknO/qWrR1sWZjMPQ1N42MKMlL/zQL30FQFZxPeWfmVKWUWAOmAHYsqB5OerTKziw==",
-      "path": "microsoft.net.test.sdk/17.1.0",
-      "hashPath": "microsoft.net.test.sdk.17.1.0.nupkg.sha512"
+      "sha512": "sha512-kYmkDYbcDd+jNvmMH4TMtgHjsUYbIsWENM2VcjB0X7TawXbehL5I8OIsu2TgFS/nQCgZE94InrqMxrm7WDy+Lw==",
+      "path": "microsoft.net.test.sdk/17.2.0",
+      "hashPath": "microsoft.net.test.sdk.17.2.0.nupkg.sha512"
     },
     "Microsoft.NETCore.Platforms/1.1.0": {
       "type": "package",
@@ -1370,19 +1418,19 @@
       "path": "microsoft.openapi/1.2.3",
       "hashPath": "microsoft.openapi.1.2.3.nupkg.sha512"
     },
-    "Microsoft.TestPlatform.ObjectModel/17.1.0": {
+    "Microsoft.TestPlatform.ObjectModel/17.2.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-OMo/FYnKGy3lZEK0gfitskRM3ga/YBt6MyCyFPq0xNLeybGOQ6HnYNAAvzyePo5WPuMiw3LX+HiuRWNjnas1fA==",
-      "path": "microsoft.testplatform.objectmodel/17.1.0",
-      "hashPath": "microsoft.testplatform.objectmodel.17.1.0.nupkg.sha512"
+      "sha512": "sha512-7j1KYDHLhU98XnCEbECMncXLydI9fNiFLcFsiBsP3lV6EkHOaj5kTPAWHYkKnPGRC9TbZUboSQq8rWI4dTQsxg==",
+      "path": "microsoft.testplatform.objectmodel/17.2.0",
+      "hashPath": "microsoft.testplatform.objectmodel.17.2.0.nupkg.sha512"
     },
-    "Microsoft.TestPlatform.TestHost/17.1.0": {
+    "Microsoft.TestPlatform.TestHost/17.2.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-JS0JDLniDhIzkSPLHz7N/x1CG8ywJOtwInFDYA3KQvbz+ojGoT5MT2YDVReL1b86zmNRV8339vsTSm/zh0RcMg==",
-      "path": "microsoft.testplatform.testhost/17.1.0",
-      "hashPath": "microsoft.testplatform.testhost.17.1.0.nupkg.sha512"
+      "sha512": "sha512-bI67J+hers241h7eD2eecS02p9CbKcQDIeoRvO4FgMlTWg2ZTzc0D3uWLYr5U+K5x9O1pNmyMoMDbYIeWY/TWw==",
+      "path": "microsoft.testplatform.testhost/17.2.0",
+      "hashPath": "microsoft.testplatform.testhost.17.2.0.nupkg.sha512"
     },
     "Microsoft.Win32.Primitives/4.3.0": {
       "type": "package",
@@ -1586,6 +1634,13 @@
       "sha512": "sha512-l4zZJ1WU2hqpQQHXz1rvC3etVZN+2DLmQMO79FhOTZHMn8tDRr+WU287sbomD0BETlmKDn0ygUgVy9k5xkkJdA==",
       "path": "system.collections.immutable/6.0.0",
       "hashPath": "system.collections.immutable.6.0.0.nupkg.sha512"
+    },
+    "System.Configuration.ConfigurationManager/4.4.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-gWwQv/Ug1qWJmHCmN17nAbxJYmQBM/E94QxKLksvUiiKB1Ld3Sc/eK1lgmbSjDFxkQhVuayI/cGFZhpBSodLrg==",
+      "path": "system.configuration.configurationmanager/4.4.0",
+      "hashPath": "system.configuration.configurationmanager.4.4.0.nupkg.sha512"
     },
     "System.Console/4.3.0": {
       "type": "package",
@@ -1874,6 +1929,13 @@
       "path": "system.security.cryptography.primitives/4.3.0",
       "hashPath": "system.security.cryptography.primitives.4.3.0.nupkg.sha512"
     },
+    "System.Security.Cryptography.ProtectedData/4.4.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-cJV7ScGW7EhatRsjehfvvYVBvtiSMKgN8bOVI0bQhnF5bU7vnHVIsH49Kva7i7GWaWYvmEzkYVk1TC+gZYBEog==",
+      "path": "system.security.cryptography.protecteddata/4.4.0",
+      "hashPath": "system.security.cryptography.protecteddata.4.4.0.nupkg.sha512"
+    },
     "System.Security.Cryptography.X509Certificates/4.3.0": {
       "type": "package",
       "serviceable": true,
@@ -1993,12 +2055,12 @@
       "path": "xunit.extensibility.execution/2.4.1",
       "hashPath": "xunit.extensibility.execution.2.4.1.nupkg.sha512"
     },
-    "xunit.runner.visualstudio/2.4.3": {
+    "xunit.runner.visualstudio/2.4.5": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-kZZSmOmKA8OBlAJaquPXnJJLM9RwQ27H7BMVqfMLUcTi9xHinWGJiWksa3D4NEtz0wZ/nxd2mogObvBgJKCRhQ==",
-      "path": "xunit.runner.visualstudio/2.4.3",
-      "hashPath": "xunit.runner.visualstudio.2.4.3.nupkg.sha512"
+      "sha512": "sha512-OwHamvBdUKgqsXfBzWiCW/O98BTx81UKzx2bieIOQI7CZFE5NEQZGi8PBQGIKawDW96xeRffiNf20SjfC0x9hw==",
+      "path": "xunit.runner.visualstudio/2.4.5",
+      "hashPath": "xunit.runner.visualstudio.2.4.5.nupkg.sha512"
     },
     "WebApi/1.0.0": {
       "type": "project",
