@@ -52,6 +52,37 @@ namespace WebApi.DBOperations
                         PublishDate = new DateTime(2002, 12, 21),
                         Title = "Dune"
                     });
+
+                context.AddRange(
+                    new Author
+                    {
+                        Id = 1,
+                        FirstName = "Atilla",
+                        LastName = "Kalay",
+                        BirthDate = new DateTime(1970, 11, 26)
+                    },
+                      new Author
+                      {
+                          Id = 2,
+                          FirstName = "Rabia",
+                          LastName = "Tanış",
+                          BirthDate = new DateTime(1970, 11, 26)
+                      },
+                        new Author
+                        {
+                            Id = 3,
+                            FirstName = "Yüşa",
+                            LastName = "Balcı",
+                            BirthDate = new DateTime(1970, 11, 26)
+                        },
+                          new Author
+                          {
+                              Id = 4,
+                              FirstName = "Seda",
+                              LastName = "Çakmak",
+                              BirthDate = new DateTime(1970, 11, 26)
+                          }
+                    );
                 context.SaveChanges();
             }
         }
