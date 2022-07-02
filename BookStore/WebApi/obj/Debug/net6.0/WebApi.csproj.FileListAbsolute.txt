@@ -33,3 +33,14 @@ C:\Users\Atilla Kalay\Desktop\Pratikler\BookStore\WebApi\bin\Debug\net6.0\AutoMa
 C:\Users\Atilla Kalay\Desktop\Pratikler\BookStore\WebApi\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 C:\Users\Atilla Kalay\Desktop\Pratikler\BookStore\WebApi\bin\Debug\net6.0\FluentValidation.dll
 C:\Users\Atilla Kalay\Desktop\Pratikler\BookStore\WebApi\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\Atilla Kalay\Desktop\Pratikler\BookStore\WebApi\bin\Debug\net6.0\FluentAssertions.dll
+C:\Users\Atilla Kalay\Desktop\Pratikler\BookStore\WebApi\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Atilla Kalay\Desktop\Pratikler\BookStore\WebApi\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Atilla Kalay\Desktop\Pratikler\BookStore\WebApi\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\Atilla Kalay\Desktop\Pratikler\BookStore\WebApi\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Atilla Kalay\Desktop\Pratikler\BookStore\WebApi\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Atilla Kalay\Desktop\Pratikler\BookStore\WebApi\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Atilla Kalay\Desktop\Pratikler\BookStore\WebApi\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+C:\Users\Atilla Kalay\Desktop\Pratikler\BookStore\WebApi\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Atilla Kalay\Desktop\Pratikler\BookStore\WebApi\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Atilla Kalay\Desktop\Pratikler\BookStore\WebApi\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll

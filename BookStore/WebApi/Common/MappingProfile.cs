@@ -5,6 +5,7 @@ using WebApi.Application.BookOperations.Queries.GetBooks;
 using WebApi.Application.BookOperations.Queries.GetByIdBook;
 using WebApi.Application.GenreOperations.Queries.GetGenreDetail;
 using WebApi.Application.GenreOperations.Queries.GetGenres;
+using WebApi.Application.UserOperations.Command.CreateUser;
 using WebApi.Entities;
 
 namespace WebApi.Common
@@ -21,6 +22,7 @@ namespace WebApi.Common
             CreateMap<UpdateBookViewCommand.UpdateBookModel, Book>().ReverseMap();
             CreateMap<Genre, GenresViewModel>();
             CreateMap<Genre, GenreDetailViewModel>();
+            CreateMap<User, CreateUserModel>().ReverseMap();
         }
     }
 }
